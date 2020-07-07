@@ -13,5 +13,5 @@ public interface EmployeeDao {
 	
 	public void addEmployee(List<Employee> e) throws EmployeeException;
 	
-	public Employee getEmployee(int id, int dept) throws EmployeeException;
+	public long getEmployee(int id, int dept) throws EmployeeException;
 }
