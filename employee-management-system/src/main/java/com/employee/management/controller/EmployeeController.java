@@ -42,7 +42,7 @@ public class EmployeeController {
 
 	// Get the Count of all employees by Department whose Salary is >=10000 .
 	@GetMapping("/employees/{id}/{dept}")
-	public Employee getEmployeeCount(@PathVariable int id, @PathVariable int dept) throws EmployeeException {
+	public long getEmployeeCount(@PathVariable int id, @PathVariable int dept) throws EmployeeException {
 		return employeeSerice.getEmployee(id,dept);
 	}
 }
