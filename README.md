@@ -27,6 +27,6 @@ To get a perticular employee details
 http://localhost:8080/employees/20
 here 20 is employee id
 
-Get the employee details by Department and emp id whose Salary is >=10000 .
+Get the employee count by Department and emp id whose Salary is >=10000 .
 http://localhost:8080/employees/20/10
 here 20 is employee id and 10 is dept
