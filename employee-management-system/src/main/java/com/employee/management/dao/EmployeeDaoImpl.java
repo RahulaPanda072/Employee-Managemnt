@@ -83,7 +83,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
 	}
 
 	@Override
-	public Employee getEmployee(int id, int dept) throws EmployeeException {
+	public long getEmployee(int id, int dept) throws EmployeeException {
 		BufferedReader inputStream = null;
 		ObjectInputStream objectInputStream = null;
 		List<Employee> employeeList = new ArrayList<Employee>();
@@ -113,8 +113,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
 			}
 		}
 		return employeeList.stream()
-				.filter(e -> e.getEmployeeID() == id && e.getDept() == dept && e.getSalary() > 10000)
-				.collect(Collectors.toList()).get(0);
+				.filter(e -> e.getEmployeeID() == id && e.getDept() == dept && e.getSalary() > 10000).count();
 	}
 
 	public List<Employee> getAllEmployees() {
