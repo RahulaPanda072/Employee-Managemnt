@@ -31,7 +31,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 	}
 
 	@Override
-	public Employee getEmployee(int id, int dept) throws EmployeeException {
+	public long getEmployee(int id, int dept) throws EmployeeException {
 		return employeeDao.getEmployee(id,dept);
 	}
 
